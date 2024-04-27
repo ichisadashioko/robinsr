@@ -11,5 +11,7 @@ jobs:
     - run: tree .
     - run: cargo install --path gameserver
     - run: cargo install --path sdkserver
+    - run: cargo build --bin gameserver
+    - run: cargo build --bin sdkserver
     - run: tree .
     
