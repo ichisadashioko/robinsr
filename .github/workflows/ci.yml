@@ -3,8 +3,13 @@ on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
+    # runs-on: windows-latest
     steps:
+    - run: tree .
+    - uses: actions/checkout@v2
+    - run: tree .
     - run: cargo install --path gameserver
     - run: cargo install --path sdkserver
     - run: tree .
+    
